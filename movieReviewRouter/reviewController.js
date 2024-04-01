@@ -10,7 +10,7 @@ export function addReview(data){
 }
 
 export function editReview(id, data){
-    return client.db("imdb").collection("reviews").updateOne({_id: new ObjectId(id)}, {$set:{movieName:data.movieName, date:data.date, userAddedActor:data.userAddedActor, userAddedProd:data.userAddedProd, moviePlot:data.moviePlot, imageData:data.imageData}});
+    return client.db("imdb").collection("reviews").updateOne({_id: new ObjectId(id)}, {$set:{movieName:data.movieName, date:data.date, userAddedActor:data.userAddedActor, userAddedProd:data.userAddedProd, moviePlot:data.moviePlot, imageData:data.imageData, rating:rating}});
 }
 
 export function deleteReview(id){
